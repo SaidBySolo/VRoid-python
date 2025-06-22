@@ -42,7 +42,7 @@ class VRoid(VRoidRequest):
         response = await self.fetch(route)
         return [CharacterModelSerializer(**item) for item in response.get("data", [])]
 
-    async def list_of_character_models_recommended_by_vroid_Hub_staff(
+    async def list_of_character_models_recommended_by_vroid_hub_staff(
         self,
         **kwargs: Unpack[ListOfCharacterModelsRecommendedByVRoidHubStaffParameters],
     ) -> list[CharacterModelSerializer]:
