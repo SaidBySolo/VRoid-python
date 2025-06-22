@@ -46,6 +46,7 @@ async def handle_redirect(request: Request):
                 "access_token": access_token,
             },
         )
+        # NOTE: You should more securely handle the access token in production
         res.cookies.add_cookie(
             "access_token",
             access_token,
