@@ -1,5 +1,11 @@
 # VRoid Web API Python Wrapper
 
+## Install
+
+```sh
+pip install vroid
+```
+
 ## Example Usage
 
 ```python
