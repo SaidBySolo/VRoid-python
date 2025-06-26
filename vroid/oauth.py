@@ -79,8 +79,10 @@ class VRoidOAuth(VRoidRequest):
                 "Authorization": f"Bearer {kwargs['token']}",
             }
         )
-        await self.fetch(route)
-        self.headers.pop("Authorization")
+        try:
+            await self.fetch(route)
+        finally:
+            self.headers.pop("Authorization")
         return None
 
     async def __aenter__(self):
